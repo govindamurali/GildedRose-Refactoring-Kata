@@ -19,7 +19,7 @@ var items = []*gildedrose.Item{
 	{"Conjured Mana Cake", 3, 6}, // <-- :O
 }
 
-var updatedItems = []*gildedrose.Item{
+var expectedUpdatedItems = []*gildedrose.Item{
 	{"+5 Dexterity Vest", 9, 19},
 	{"Aged Brie", 1, 1},
 	{"Elixir of the Mongoose", 4, 6},
@@ -35,8 +35,8 @@ func TestUpdateQuality(t *testing.T) {
 	gildedrose.UpdateQuality(items)
 
 	for key := range items {
-		assert.Equal(t, updatedItems[key].Quality, items[key].Quality)
-		assert.Equal(t, updatedItems[key].SellIn, items[key].SellIn)
-		assert.Equal(t, updatedItems[key].Name, items[key].Name)
+		assert.Equal(t, expectedUpdatedItems[key].Quality, items[key].Quality)
+		assert.Equal(t, expectedUpdatedItems[key].SellIn, items[key].SellIn)
+		assert.Equal(t, expectedUpdatedItems[key].Name, items[key].Name)
 	}
 }

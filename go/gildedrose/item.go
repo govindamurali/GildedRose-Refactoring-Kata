@@ -7,9 +7,12 @@ type Item struct {
 	SellIn, Quality int
 }
 
+// updates the quality of the item using a particular updateStrategy that's passed
 func (i *Item) updateQuality(itemUpdateStrategy updatestrategy.IUpdateStrategy) {
 	i.Quality = itemUpdateStrategy.GetUpdatedQuality(i.Quality, i.SellIn)
 }
+
+// updates the sellin of the item using a particular updateStrategy that's passed
 func (i *Item) updateSellin(itemUpdateStrategy updatestrategy.IUpdateStrategy) {
 	i.SellIn = itemUpdateStrategy.GetUpdatedSellin(i.SellIn)
 }
