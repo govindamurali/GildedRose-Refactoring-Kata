@@ -2,19 +2,20 @@ package updatestrategy
 
 type IUpdateStrategy interface {
 	GetUpdatedQuality(quality, sellIn int) (updatedQuality int)
+	GetUpdatedSellin(sellIn int) (updatedSellin int)
 }
 
-type QualityUpdateStrategyResolver struct{}
+type UpdateStrategyResolver struct{}
 
-func (i *QualityUpdateStrategyResolver) GetStrategy(name string) IUpdateStrategy {
+func (i *UpdateStrategyResolver) GetStrategy(name string) IUpdateStrategy {
 	switch name {
 	case _agedBrie:
-		return &AgedBrieUpdateStrategy{}
+		return &agedBrieUpdateStrategy{}
 	case _sulfuras:
 		return &sulfurasUpdateStrategy{}
 	case _backStage:
-		return &BackStageUpdateStrategy{}
+		return &backStageUpdateStrategy{}
 	}
 
-	return &DefaultUpdateStrategy{}
+	return &defaultUpdateStrategy{}
 }

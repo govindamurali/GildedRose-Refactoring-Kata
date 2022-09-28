@@ -3,10 +3,12 @@ package gildedrose
 import "github.com/emilybache/gildedrose-refactoring-kata/gildedrose/updatestrategy"
 
 func UpdateQuality(items []*Item) {
-	updateStrategyResolver := updatestrategy.QualityUpdateStrategyResolver{}
+	updateStrategyResolver := updatestrategy.UpdateStrategyResolver{}
 
 	for i := 0; i < len(items); i++ {
-		items[i].updateQuality(updateStrategyResolver.GetStrategy(items[i].Name))
+		strategy := updateStrategyResolver.GetStrategy(items[i].Name)
+		items[i].updateQuality(strategy)
+		items[i].updateSellin(strategy)
 	}
 }
 

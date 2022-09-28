@@ -1,6 +1,8 @@
 package updatestrategy
 
-type ConjuredUpdateStrategy struct{}
+type ConjuredUpdateStrategy struct {
+	defaultSellinUpdateStrategy
+}
 
 func (a *ConjuredUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (updatedQuality int) {
 	qualityIncrement := -2

@@ -7,7 +7,9 @@ type Item struct {
 	SellIn, Quality int
 }
 
-// default implementation of updateQuality.
 func (i *Item) updateQuality(itemUpdateStrategy updatestrategy.IUpdateStrategy) {
 	i.Quality = itemUpdateStrategy.GetUpdatedQuality(i.Quality, i.SellIn)
+}
+func (i *Item) updateSellin(itemUpdateStrategy updatestrategy.IUpdateStrategy) {
+	i.SellIn = itemUpdateStrategy.GetUpdatedSellin(i.SellIn)
 }

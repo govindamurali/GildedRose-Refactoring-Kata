@@ -1,8 +1,10 @@
 package updatestrategy
 
-type AgedBrieUpdateStrategy struct{}
+type agedBrieUpdateStrategy struct {
+	defaultSellinUpdateStrategy
+}
 
-func (a *AgedBrieUpdateStrategy) GetUpdatedQuality(quality, sellIn int) int {
+func (a *agedBrieUpdateStrategy) GetUpdatedQuality(quality, sellIn int) int {
 	quality = quality + 1
 	if quality >= 50 {
 		quality = 50

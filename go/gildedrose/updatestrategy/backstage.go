@@ -1,8 +1,10 @@
 package updatestrategy
 
-type BackStageUpdateStrategy struct{}
+type backStageUpdateStrategy struct {
+	defaultSellinUpdateStrategy
+}
 
-func (a *BackStageUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (updatedQuality int) {
+func (a *backStageUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (updatedQuality int) {
 	if sellIn < 0 {
 		return 0
 	}
