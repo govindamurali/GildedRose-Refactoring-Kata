@@ -11,9 +11,10 @@ func (a *backStageUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (update
 
 	increment := 1
 	if sellIn < 6 {
-		increment = 2
-	} else if sellIn < 11 {
-		increment = 3
+		increment += 1
+	}
+	if sellIn < 11 {
+		increment += 1
 	}
 	quality = quality + increment
 
