@@ -41,7 +41,7 @@ func main() {
 			fmt.Println(items[i])
 		}
 		fmt.Println("")
-		gildedrose.UpdateQuality(items)
-		//gildedrose.UpdateQualityBackup(items)
+		//gildedrose.UpdateQuality(items)
+		gildedrose.UpdateQualityBackup(items)
 	}
 }
