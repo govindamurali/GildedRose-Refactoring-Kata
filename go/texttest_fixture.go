@@ -42,6 +42,5 @@ func main() {
 		}
 		fmt.Println("")
 		gildedrose.UpdateQuality(items)
-		//gildedrose.UpdateQualityBackup(items)
 	}
 }

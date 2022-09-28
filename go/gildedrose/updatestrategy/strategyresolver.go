@@ -8,7 +8,8 @@ const (
 	_conjured  string = "Conjured Mana Cake"
 )
 
-// this
+// Only this interface and the methods are exposed outside 'updatestrategy' package, not the specific implementations
+// hence if you directly try to access any of the particular strategies like 'agedBrieStrategy
 type IUpdateStrategy interface {
 	GetUpdatedQuality(quality, sellIn int) (updatedQuality int)
 	GetUpdatedSellin(sellIn int) (updatedSellin int)
