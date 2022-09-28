@@ -3,10 +3,10 @@ package updatestrategy
 type defaultQualityUpdateStrategy struct{}
 
 func (a *defaultQualityUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (updatedQuality int) {
-	qualityDecrement := 1
+	qualityDecrement := -1
 
 	if sellIn < 0 {
-		qualityDecrement = 2
+		qualityDecrement = -2
 	}
 
 	quality = quality + qualityDecrement

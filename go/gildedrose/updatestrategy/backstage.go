@@ -16,5 +16,10 @@ func (a *backStageUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (update
 		increment = 3
 	}
 	quality = quality + increment
+
+	if quality >= 50 {
+		quality = 50
+	}
+
 	return quality
 }

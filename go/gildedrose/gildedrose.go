@@ -7,8 +7,8 @@ func UpdateQuality(items []*Item) {
 
 	for i := 0; i < len(items); i++ {
 		strategy := updateStrategyResolver.GetStrategy(items[i].Name)
-		items[i].updateQuality(strategy)
 		items[i].updateSellin(strategy)
+		items[i].updateQuality(strategy)
 	}
 }
 
