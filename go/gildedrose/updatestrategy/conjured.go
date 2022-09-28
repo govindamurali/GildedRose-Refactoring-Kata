@@ -1,10 +1,10 @@
 package updatestrategy
 
-type ConjuredUpdateStrategy struct {
-	defaultSellinUpdateStrategy
+type conjuredUpdateStrategy struct {
+	defaultSellinUpdateStrategy // doing this assigns a default sellin update strategy
 }
 
-func (a *ConjuredUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (updatedQuality int) {
+func (a *conjuredUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (updatedQuality int) {
 	qualityIncrement := -2
 
 	if sellIn < 0 {

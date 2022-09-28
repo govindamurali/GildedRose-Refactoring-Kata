@@ -2,6 +2,7 @@ package updatestrategy
 
 type defaultQualityUpdateStrategy struct{}
 
+// this is the default quality update strategy mentioned in the doc. will be followed unless we specifically implement for a type
 func (a *defaultQualityUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (updatedQuality int) {
 	qualityDecrement := -1
 

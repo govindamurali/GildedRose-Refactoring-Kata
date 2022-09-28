@@ -2,6 +2,8 @@ package gildedrose
 
 import "github.com/emilybache/gildedrose-refactoring-kata/gildedrose/updatestrategy"
 
+// primary method to update quality
+// @param items - takes in a list of items to update
 func UpdateQuality(items []*Item) {
 	updateStrategyResolver := updatestrategy.UpdateStrategyResolver{}
 
@@ -13,6 +15,7 @@ func UpdateQuality(items []*Item) {
 }
 
 // old code
+/*
 func UpdateQualityBackup(items []*Item) {
 	for i := 0; i < len(items); i++ {
 
@@ -64,3 +67,4 @@ func UpdateQualityBackup(items []*Item) {
 	}
 
 }
+*/

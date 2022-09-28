@@ -1,7 +1,7 @@
 package updatestrategy
 
 type agedBrieUpdateStrategy struct {
-	defaultSellinUpdateStrategy
+	defaultSellinUpdateStrategy // doing this assigns a default sellin update strategy
 }
 
 func (a *agedBrieUpdateStrategy) GetUpdatedQuality(quality, sellIn int) int {

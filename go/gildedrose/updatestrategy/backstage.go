@@ -1,7 +1,7 @@
 package updatestrategy
 
 type backStageUpdateStrategy struct {
-	defaultSellinUpdateStrategy
+	defaultSellinUpdateStrategy // doing this assigns a default sellin update strategy
 }
 
 func (a *backStageUpdateStrategy) GetUpdatedQuality(quality, sellIn int) (updatedQuality int) {
